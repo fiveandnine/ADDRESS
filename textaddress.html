@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+	<script type="text/javascript" src="address.js"></script>
+	<link rel="stylesheet/less" type="text/css" href="less/style.less">
+	<script type="text/javascript" src="http://cdn.bootcss.com/less.js/1.7.0/less.min.js"></script>
+	</script>
+</head>
+<body ng-app="testModel" ng-controller="testController">
+	<button ng-click="initdata()">sdasdad</button>
+	
+<div style="border: 0.062rem solid #000000;">
+	<div  class="addresscontain">
+	<!-- <div class="topmask"></div> -->
+	<div class="addresscontain_" >
+		<div class="provinces_">
+			<ul>
+				<li ng-repeat= "x in provinces_show">{{x.city_name}}</li>
+			</ul>
+		</div>
+		<div class="city_">
+			<ul>
+				<li ng-repeat= "x in city_show">{{x.city_name}}</li>
+			</ul>
+		</div>
+		<div class="country_">
+			<ul>
+				<li ng-repeat= "x in country_show">{{x.city_name}}</li>
+			</ul>
+		</div>
+	</div>
+	<!-- <div class="bottommask"></div> -->
+	</div>
+</div>
+</body>
+</html>

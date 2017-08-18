@@ -1,0 +1,95 @@
+
+@background-color: #ce1c1c;
+@text-color: #1A237E;
+@inputxlenth: 100px;
+
+/*全局样式*/
+.inputdd (@inputxlenth){
+	width: @inputxlenth;
+	display: inline-block;
+	text-align: center;
+	/*height: 2.25rem;*/
+	span{
+		width: 0.25*@inputxlenth;
+		display: inline-block;
+		text-align: center;
+		/*height: 2.25rem;*/
+	}
+	input{
+		width: 0.25*@inputxlenth;
+		/*text-align: center;*/
+		/*height: 2.25rem;*/
+		&:extend(span);
+	}
+}
+
+.checkboxdd(@checkboxheight, @checkcolor, @pcolor){
+	width: 60rem;
+	.checkouterbox{
+		display: inline-block;
+		border: 0.062rem solid #999999;
+		height: @checkboxheight;
+		width: @checkboxheight;
+		.checkindexbox{
+			height: @checkboxheight;
+			width: @checkboxheight;
+			/*background-color: #12fddd*/
+		}
+		.oncheckdd{
+			background-color: @checkcolor;
+		}
+	}
+	p{
+		display: inline-block;
+		color: @pcolor;
+		font-size: @checkboxheight
+	}
+}
+
+/*自定义样式*/
+.checkbox_dd{
+	.checkboxdd(30px, orange, #999999)
+}
+.sada{
+	.inputdd(60px);
+}
+
+/*地址样式*/
+.addresscontain{
+	width: 100%;
+	height: 9.5rem;
+	/*color-stop函数接受两个参数，第一个表示渐变的位置，0为起点，0.5为中点，1为结束点；第二个表示该点的颜色。*/
+	-webkit-mask : -webkit-linear-gradient(top, rgba(0,0,0,0) 5%, rgba(0,0,0,1), rgba(0,0,0,0));
+	-webkit-mask : -moz-linear-gradient(top, rgba(0,0,0,0) 5%, rgba(0,0,0,1), rgba(0,0,0,0));
+	-webkit-mask : -o-linear-gradient(top, rgba(0,0,0,0) 5%, rgba(0,0,0,1), rgba(0,0,0,0));
+	-webkit-mask : -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), color-stop(0.45, rgba(0,0,0,1)), color-stop(0.55, rgba(0,0,0,1)), color-stop(1, rgba(0,0,0,0)));
+	overflow: hidden;
+}
+.addresscontain_{
+	background-color: #ffffff;
+	width: 100%;
+	height: 1.375rem;
+	border-top: 0.062rem solid #000000; 
+	border-bottom: 0.062rem solid #000000; 
+	margin: 4rem 0rem;
+	div{
+		float: left;
+		width: 33%;
+	}
+	ul{
+		position: relative;
+		top: 0.0rem;
+		margin: 0rem;
+		list-style: none;
+		padding-left: 0.0rem;
+		border: 0.0rem;
+		li{
+			font-size: 1rem;
+			text-align: center;
+			border: 0.0rem;
+			padding: 0;
+			margin: 0;
+			height: 1.375rem;/*22px*/
+		}
+	}
+}
